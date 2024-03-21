@@ -55,7 +55,7 @@
 <body>
 <div class="login-container">
     <h2>Login</h2>
-    <form th:action="@{/login}" th:object="${login}" method="post">
+    <form th:action="@{/login}" th:object="${request}" method="post">
         <input type="text" id="userId" name="userId" placeholder="Username" required>
         <input type="password" id="userPassword" name="userPassword" placeholder="Password" required>
         <input type="submit" value="Login">

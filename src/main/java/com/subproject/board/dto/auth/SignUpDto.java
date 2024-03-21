@@ -1,5 +1,6 @@
 package com.subproject.board.dto.auth;
 
+import jakarta.validation.constraints.Email;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,6 +20,15 @@ public class SignUpDto {
         @NotBlank
         @Size(min = 3, max = 50)
         private String userPassword;
+
+        @NotBlank
+        @Size(min = 3, max = 50)
+        private String userNickname;
+
+        @NotBlank
+        @Email
+        @Size(min = 3, max = 50)
+        private String userEmail;
 
     }
 
