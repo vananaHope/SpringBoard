@@ -6,6 +6,7 @@ import com.subproject.board.dto.auth.LoginDto;
 import com.subproject.board.dto.auth.SignUpDto;
 import com.subproject.board.entity.UserEntity;
 import com.subproject.board.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
+@Transactional
 public class UserService {
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;

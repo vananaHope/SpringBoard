@@ -1,5 +1,6 @@
 package com.subproject.board.entity;
 
+import com.subproject.board.common.config.Authority;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,6 +31,10 @@ public class UserEntity {
 
     @Column(name = "user_email")
     private String userEmail;
+
+    @Column(name="authority")
+    @Enumerated(EnumType.STRING)
+    private Authority authority;
 
     @Column(name = "create_dt")
     private LocalDateTime createDt;

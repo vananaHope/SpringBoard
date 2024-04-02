@@ -1,6 +1,5 @@
 package com.subproject.board.controller;
 
-import com.subproject.board.dto.auth.LoginDto;
 import com.subproject.board.dto.auth.SignUpDto;
 import com.subproject.board.service.UserService;
 import jakarta.validation.Valid;
@@ -15,18 +14,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class UserController {
     private final UserService userService;
 
-    @PostMapping("/login")
-    public String login(@Valid @ModelAttribute("request") LoginDto.Request request, Model model) {
-
-        LoginDto.Response response = userService.login(request.getUserId(), request.getUserPassword());
-
-        model.addAttribute("login",response);
-
-        return "Board";
-    }
+//    @PostMapping("/login-process")
+//    public String login(@Valid @ModelAttribute("reqLogin") LoginDto.Request request, Model model) {
+//
+//        LoginDto.Response response = userService.login(request.getUserId(), request.getUserPassword());
+//
+//        model.addAttribute("login",response);
+//
+//        return "Board";
+//    }
 
     @PostMapping("/signup")
-    public String signup(@Valid @ModelAttribute("request") SignUpDto.Request request, Model model){
+    public String signup(@Valid @ModelAttribute("reqSignup") SignUpDto.Request request, Model model){
 
         SignUpDto.Response response = userService.signup(request);
 
