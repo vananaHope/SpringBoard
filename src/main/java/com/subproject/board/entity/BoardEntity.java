@@ -3,8 +3,6 @@ package com.subproject.board.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Getter
 @Setter
@@ -33,12 +31,6 @@ public class BoardEntity {
 
     @Column(name = "attach_no")
     private String attachNo;
-
-    @Column(name = "create_dt")
-    private LocalDateTime createDt;
-
-    @Column(name = "modify_dt")
-    private LocalDateTime modifyDt;
 
     @Column(name = "create_by")
     private String createBy;

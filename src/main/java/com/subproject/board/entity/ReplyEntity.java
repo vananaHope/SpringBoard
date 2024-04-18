@@ -3,8 +3,6 @@ package com.subproject.board.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Getter
 @Setter
@@ -31,14 +29,13 @@ public class ReplyEntity {
 
     @Column(name = "parent_id")
     public String parentId;
+
     @Column(name = "depth")
     public String depth;
-    @Column(name = "create_dt")
-    public LocalDateTime createDt;
-    @Column(name = "modify_dt")
-    public LocalDateTime modifyDt;
+
     @Column(name = "create_by")
     public String createBy;
+
     @Column(name = "modify_by")
     public String modifyBy;
 }

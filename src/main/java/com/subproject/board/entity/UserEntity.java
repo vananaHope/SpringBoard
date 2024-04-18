@@ -3,8 +3,6 @@ package com.subproject.board.entity;
 import com.subproject.board.common.config.Authority;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -14,7 +12,7 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "user")
-public class UserEntity {
+public class UserEntity extends BaseTimeEntity{
     @Id
     @Column(name = "user_code")
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -35,11 +33,5 @@ public class UserEntity {
     @Column(name="authority")
     @Enumerated(EnumType.STRING)
     private Authority authority;
-
-    @Column(name = "create_dt")
-    private LocalDateTime createDt;
-
-    @Column(name = "modify_dt")
-    private LocalDateTime modifyDt;
 
 }
