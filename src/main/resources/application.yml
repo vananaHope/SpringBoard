@@ -22,3 +22,10 @@ spring:
 server:
   port: 8070
 
+jwt:
+  header: Authorization
+  secret: b215768cb39cbac0d460d2505a5de55eb34037c00214ac7c42155aca557bd23e840c4071bee35b7e7cde3a93915b6d1b0b2fb04152cb44d1f0b3effb5e6089f9
+  access-token-validity-in-seconds: 3600000
+  refresh-token-validity-in-seconds: 2592000000
+
+
